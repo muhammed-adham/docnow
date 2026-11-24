@@ -15,37 +15,34 @@ A modern web application for booking medical appointments, built with React and 
 - **Doctor Search & Filtering**
   - Search by specialty, location, and availability
   - Detailed doctor profiles with ratings and reviews
-  - Real-time availability checking
+  - Availability shown per doctor (static demo data)
 
 - **Appointment Booking**
   - Easy-to-use booking interface
   - Multiple time slot selection
-  - Appointment confirmation and reminders
+  - Appointment confirmation after booking
 
 - **User Management**
-  - Patient registration and profile management
-  - Appointment history tracking
-  - Secure authentication
+  - Appointment history (saved in the browser with localStorage)
+  - Login page UI (authentication is not implemented yet)
 
 - **Accessibility**
-  - WCAG 2.1 compliant
+  - ARIA labels and roles on interactive elements
   - Keyboard navigation support
-  - Screen reader compatibility
   - Responsive design for all devices
 
 ## Tech Stack
 
 - **Frontend**
   - React 18
+  - Vite
   - Tailwind CSS
   - React Router
   - React Icons
-  - React Query (for data fetching)
 
 - **Development Tools**
   - Cursor IDE with AI assistance
   - ESLint
-  - Prettier
   - Git for version control
 
 ## Setup Instructions
@@ -66,121 +63,62 @@ cd healthcare-app
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Create a `.env` file in the root directory:
-```env
-REACT_APP_API_URL=your_api_url_here
-REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-```
-
-4. Start the development server:
+3. Start the development server:
 ```bash
-npm start
-# or
-yarn start
+npm run dev
 ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser.
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Environment Setup
-
-1. **Development Environment**
-   - Use Node.js v16 or higher
-   - Install recommended VS Code extensions:
-     - ESLint
-     - Prettier
-     - Tailwind CSS IntelliSense
-
-2. **Production Build**
+### Production Build
 ```bash
 npm run build
-# or
-yarn build
 ```
 
 ## AI Tool Usage
 
-During development, we utilized Cursor IDE's AI capabilities for:
+During development, Cursor IDE's AI capabilities were used for:
 
 1. **Code Generation**
    - Component structure and boilerplate
    - Accessibility improvements
-   - Create mock data
+   - Mock data creation
 
 2. **Code Refactoring**
    - Component optimization
-   - Performance improvements
 
 3. **Bug Fixing**
    - Error detection and resolution
-   - Type checking
    - Logic validation
-
-### AI-Assisted Development Workflow
-
-1. **Component Development**
-   - Use AI to generate component structure
-   - Implement accessibility features
-   - Add responsive design elements
-
-2. **Code Review**
-   - AI-assisted code review
-   - Performance optimization suggestions
-   - Best practices implementation
-
-3. **Testing**
-   - AI-generated test cases
-   - Error boundary implementation
-   - Edge case handling
 
 ## Current Limitations
 
 1. **Data Management**
-   - Currently using static JSON data
+   - Uses static mock data (no backend)
    - No real-time updates
-   - Limited data persistence
+   - Appointments persist only in the browser (localStorage)
 
 2. **Authentication**
-   - Basic authentication implementation
-   - No social login integration
-   - Limited session management
+   - Not implemented yet (the login page is UI only)
+   - No social login
+   - No session management
 
 3. **Performance**
-   - Large bundle size
    - No code splitting
-   - Limited caching implementation
+   - No caching layer
 
 4. **Features**
-   - No video consultation support
-   - Limited payment integration
-   - Basic notification system
+   - No video consultation
+   - No payment integration
+   - No notification system
 
 ## Next Steps
 
-1. **Immediate Improvements**
-   - [ ] Implement real-time data updates
-   - [ ] Add comprehensive error handling
-   - [ ] Enhance authentication system
-   - [ ] Optimize bundle size
-
-2. **Feature Additions**
-   - [ ] Video consultation integration
-   - [ ] Advanced search filters
-   - [ ] Patient medical history
-   - [ ] Multi-language support
-
-3. **Technical Enhancements**
-   - [ ] Implement service workers for offline support
-   - [ ] Add comprehensive testing suite
-   - [ ] Enhance security measures
-   - [ ] Optimize performance metrics
-
-4. **Accessibility Improvements**
-   - [ ] Add more ARIA labels
-   - [ ] Implement high contrast mode
-   - [ ] Add keyboard shortcuts
-   - [ ] Enhance screen reader support
-
+- [ ] Connect a backend with real authentication
+- [ ] Real-time availability updates
+- [ ] Run a formal accessibility audit (WCAG 2.1)
+- [ ] Add automated tests
+- [ ] Code splitting and bundle optimization
+- [ ] Multi-language support
